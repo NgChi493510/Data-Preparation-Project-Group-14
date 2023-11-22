@@ -1,12 +1,13 @@
 import pandas as pd
+from IPython.display import display
 
 def __get_df_name(df):
     name = name =[x for x in globals() if globals()[x] is df][0]
     return name
 
-def firstsight(df:pd.DataFrame):
+def firstsight(df:pd.DataFrame, name:str):
     print('-'*30)
-    print(f'\033[1m{get_df_name(df)}\033[0m')
+    print(f'\033[1m{name}\033[0m')
     print('-'*30)
     print(f'\tShape:{df.shape}')
     print('\tFirst 5 rows:')
@@ -20,3 +21,4 @@ def firstsight(df:pd.DataFrame):
     display(col_info)
     print("\tFeatures' descriptive statistics:")
     display(df.describe().T)
+
