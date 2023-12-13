@@ -41,9 +41,9 @@ def cat_visual(df,feature):
 
     #2
     sns.barplot(df[feature].value_counts(),\
-                orient='h',ax=axnew2,width = 0.5,alpha=0.8)   
+                orient='h',ax=axnew2,color= 'red',width = 0.5,alpha=0.2)   
     sns.barplot(df[df['TARGET']==0][feature].value_counts(),\
-                orient='h',ax=axnew2,color= 'red',width = 0.5,alpha = 0.8)
+                orient='h',ax=axnew2,color= 'red',width = 0.5,alpha = 0.4)
     axnew2.spines[['top','bottom','left','right']].set_visible(False)
     axnew2.xaxis.tick_top() 
     axnew2.tick_params(left=False, bottom = False,top = False)
