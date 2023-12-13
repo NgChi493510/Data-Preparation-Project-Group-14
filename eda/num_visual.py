@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 file = ['dseb63_application_test','dseb63_application_train','dseb63_bureau',\
         'dseb63_bureau_balance', 'dseb63_credit_card_balance','dseb63_installments_payments',\
         'dseb63_POS_CASH_balance','dseb63_previous_application']
-file_path = 'D:\\Năm 3 - HK1\\Visualize\\Ex\\final_project\\dseb63_final_project_DP_dataset\\dseb63_final_project_DP_dataset\\'
+file_path = 'C:/Users/Dell/Documents/Data Preparation Project/dataset/'
 # df = pd.read_csv(file_path + file[1]+'.csv',index_col='Unnamed: 0')
 
 
@@ -232,7 +232,7 @@ def extract_mean(x,on,prefix):
     y = x.groupby(on, as_index=False).mean().add_prefix(prefix) 
     return y
 # file_path = 'C:/Users/Dell/Documents/Data Preparation Project/dataset/' 
-file_path = 'D:\\Năm 3 - HK1\\Visualize\\Ex\\final_project\\dseb63_final_project_DP_dataset\\dseb63_final_project_DP_dataset\\'
+
 
 app_train = pd.read_csv(file_path + "dseb63_application_train.csv", index_col='Unnamed: 0')
 app_test = pd.read_csv(file_path + "dseb63_application_test.csv", index_col='Unnamed: 0')
