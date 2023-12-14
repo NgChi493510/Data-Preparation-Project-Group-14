@@ -70,7 +70,7 @@ def num_visual(df,feature, corr, kde = False):
     v1 = df[(df['TARGET']==1) & (df[feature]<u) & (df[feature]>l)][feature]
     v2 = df[(df['TARGET']==0) & (df[feature]<u) & (df[feature]>l)][feature]
     if df[feature].nunique() > 10:
-        if (l != u).bool():
+        if (l != u):
             if kde == False:
                 ax[0][0].hist(v0)
             # cross_tabulation with Target variable
@@ -126,4 +126,3 @@ def num_visual(df,feature, corr, kde = False):
     axnew2.tick_params(left=False, bottom = False)
     axnew2.set_ylabel('')
     f.tight_layout(h_pad=3)
-
